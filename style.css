@@ -77,3 +77,64 @@ nav a:hover{
     transform:translateY(-3px);
     box-shadow:0 12px 30px rgba(37,99,235,.25);
 }
+/* Hero Upgrade */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#eef4ff,#ffffff);
+}
+
+.hero-content{
+    width:90%;
+    max-width:900px;
+}
+
+.hero h2{
+    font-size:64px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#666;
+    margin-bottom:40px;
+}
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.search-box input{
+    width:450px;
+    max-width:100%;
+    padding:18px;
+    border:none;
+    border-radius:50px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    font-size:16px;
+    outline:none;
+}
+
+.search-box button{
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:18px 35px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.search-box button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
