@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details | Atlas</title>
+    <title>Atlas | Product Details</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,7 +13,7 @@
 
 <header>
 
-    <h1><a href="index.html" style="text-decoration:none;color:#1a1a1a;">ATLAS</a></h1>
+    <h1><a href="index.html" class="logo">ATLAS</a></h1>
 
     <nav>
         <a href="index.html">Home</a>
@@ -23,32 +24,100 @@
 
 </header>
 
-<section class="product-page">
+<main class="product-container">
 
-    <div class="product-image">
+    <div class="product-gallery">
 
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800" alt="iPhone">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900"
+             alt="Product">
 
     </div>
 
-    <div class="product-info">
+    <div class="product-details">
 
-        <h2>iPhone 16 Pro</h2>
+        <span class="badge">BEST SELLER</span>
 
-        <h3>₹1,19,999</h3>
+        <h1>iPhone 16 Pro</h1>
 
-        <p>
+        <div class="rating">
+            ⭐⭐⭐⭐⭐
+            <span>(2,143 Reviews)</span>
+        </div>
 
-            Experience Apple's latest flagship with an incredible camera,
-            powerful processor, stunning display and all-day battery life.
+        <h2 class="price">₹1,19,999</h2>
 
+        <p class="stock">
+            ✔ In Stock
         </p>
 
-        <button>Add to Cart</button>
+        <div class="delivery">
+
+            <p>🚚 Free Delivery</p>
+
+            <p>🔁 7-Day Replacement</p>
+
+            <p>🔒 Secure Payment</p>
+
+        </div>
+
+        <div class="quantity">
+
+            <label>Quantity</label>
+
+            <div class="qty-box">
+
+                <button>-</button>
+
+                <span>1</span>
+
+                <button>+</button>
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button class="cart-btn">
+                Add to Cart
+            </button>
+
+            <button class="buy-btn">
+                Buy Now
+            </button>
+
+        </div>
 
     </div>
+
+</main>
+
+<section class="description">
+
+    <h2>Description</h2>
+
+    <p>
+        Experience Apple's latest flagship smartphone with a powerful processor,
+        stunning display, professional camera system, premium titanium design,
+        and all-day battery life.
+    </p>
+
+</section>
+
+<section class="description">
+
+    <h2>Specifications</h2>
+
+    <ul>
+        <li>Display: 6.3-inch OLED</li>
+        <li>Processor: Apple A19 Pro</li>
+        <li>Storage: 256 GB</li>
+        <li>Camera: 48 MP Triple Camera</li>
+        <li>Battery: All-Day Battery</li>
+    </ul>
 
 </section>
 
 </body>
+
 </html>
