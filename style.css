@@ -179,3 +179,67 @@ nav a:hover{
 .card h3{
     font-size:22px;
 }
+/* Featured Products */
+
+.featured-products{
+    padding:80px 8%;
+    background:#f8f9fc;
+}
+
+.featured-products h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.product-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+    text-align:center;
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+}
+
+.product-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.product-card h3{
+    margin:20px 0 10px;
+    font-size:22px;
+}
+
+.price{
+    color:#2563eb;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.product-card button{
+    margin-bottom:25px;
+    padding:14px 30px;
+    border:none;
+    border-radius:50px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.product-card button:hover{
+    background:#1d4ed8;
+}
