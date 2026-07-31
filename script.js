@@ -32,7 +32,9 @@ if (addBtn) {
 
         localStorage.setItem("cart", JSON.stringify(cart));
 
-        alert("Product added to cart!");
+updateCartCount();
+
+alert("Product added to cart!");
     });
 
 }
@@ -78,3 +80,26 @@ if (cartContainer) {
         "₹" + totalPrice.toLocaleString();
 
 }
+// =========================
+// UPDATE CART COUNT
+// =========================
+
+function updateCartCount() {
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let total = 0;
+
+    cart.forEach(item => {
+        total += item.quantity;
+    });
+
+    const cartCount = document.getElementById("cart-count");
+
+    if (cartCount) {
+        cartCount.textContent = total;
+    }
+
+}
+
+updateCartCount();
