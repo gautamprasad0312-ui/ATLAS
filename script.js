@@ -1,6 +1,11 @@
-// =========================
-// ATLAS SHOPPING CART
-// =========================
+// ======================================
+// ATLAS - MAIN SCRIPT
+// Version 2.0
+// ======================================
+
+// -----------------------------
+// Product Data (Temporary)
+// -----------------------------
 
 const product = {
     id: 1,
@@ -9,84 +14,29 @@ const product = {
     image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600"
 };
 
-// ---------- ADD TO CART ----------
+// -----------------------------
+// Get Cart
+// -----------------------------
 
-const addBtn = document.getElementById("add-to-cart");
-
-if (addBtn) {
-
-    addBtn.addEventListener("click", () => {
-
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-        const existing = cart.find(item => item.id === product.id);
-
-        if (existing) {
-            existing.quantity++;
-        } else {
-            cart.push({
-                ...product,
-                quantity: 1
-            });
-        }
-
-        localStorage.setItem("cart", JSON.stringify(cart));
-
-updateCartCount();
-
-alert("Product added to cart!");
-    });
-
+function getCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
-// ---------- LOAD CART ----------
+// -----------------------------
+// Save Cart
+// -----------------------------
 
-const cartContainer = document.getElementById("cart-items");
-
-if (cartContainer) {
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    let totalItems = 0;
-    let totalPrice = 0;
-
-    cart.forEach(item => {
-
-        totalItems += item.quantity;
-        totalPrice += item.price * item.quantity;
-
-        cartContainer.innerHTML += `
-            <div class="cart-item">
-                <img src="${item.image}" width="120">
-
-                <div>
-
-                    <h3>${item.name}</h3>
-
-                    <p>₹${item.price.toLocaleString()}</p>
-
-                    <p>Quantity: ${item.quantity}</p>
-
-                </div>
-
-            </div>
-        `;
-
-    });
-
-    document.getElementById("total-items").innerText = totalItems;
-
-    document.getElementById("total-price").innerText =
-        "₹" + totalPrice.toLocaleString();
-
+function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
 }
-// =========================
-// UPDATE CART COUNT
-// =========================
+
+// -----------------------------
+// Update Cart Count
+// -----------------------------
 
 function updateCartCount() {
 
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = getCart();
 
     let total = 0;
 
@@ -102,4 +52,116 @@ function updateCartCount() {
 
 }
 
+// -----------------------------
+// Add Product To Cart
+// -----------------------------
+
+function addToCart(product) {
+
+    let cart = getCart();
+
+    const existing = cart.find(item => item.id === product.id);
+
+    if (existing) {
+
+        existing.quantity++;
+
+    } else {
+
+        cart.push({
+            ...product,
+            quantity: 1
+        });
+
+    }
+
+    saveCart(cart);
+
+    updateCartCount();
+
+    alert("✅ Product added to cart!");
+
+}
+
+// -----------------------------
+// Product Page
+// -----------------------------
+
+const addButton = document.getElementById("add-to-cart");
+
+if (addButton) {
+
+    addButton.addEventListener("click", () => {
+
+        addToCart(product);
+
+    });
+
+}
+
+// -----------------------------
+// Load Cart Page
+// -----------------------------
+
+function loadCart() {
+
+    const cartContainer = document.getElementById("cart-items");
+
+    if (!cartContainer) return;
+
+    const cart = getCart();
+
+    cartContainer.innerHTML = "";
+
+    let totalItems = 0;
+    let totalPrice = 0;
+
+    cart.forEach(item => {
+
+        totalItems += item.quantity;
+        totalPrice += item.price * item.quantity;
+
+        cartContainer.innerHTML += `
+
+        <div class="cart-item">
+
+            <img src="${item.image}" width="120" alt="${item.name}">
+
+            <div>
+
+                <h3>${item.name}</h3>
+
+                <p>₹${item.price.toLocaleString()}</p>
+
+                <p>Quantity: ${item.quantity}</p>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+    const totalItemsElement = document.getElementById("total-items");
+
+    if (totalItemsElement) {
+        totalItemsElement.textContent = totalItems;
+    }
+
+    const totalPriceElement = document.getElementById("total-price");
+
+    if (totalPriceElement) {
+        totalPriceElement.textContent =
+            "₹" + totalPrice.toLocaleString();
+    }
+
+}
+
+// -----------------------------
+// Initialize Website
+// -----------------------------
+
 updateCartCount();
+
+loadCart();
