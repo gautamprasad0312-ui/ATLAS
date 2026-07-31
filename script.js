@@ -165,3 +165,79 @@ function loadCart() {
 updateCartCount();
 
 loadCart();
+
+// =========================
+// LOAD CHECKOUT
+// =========================
+
+function loadCheckout() {
+
+    const checkoutItems = document.getElementById("checkout-items");
+
+    if (!checkoutItems) return;
+
+    const cart = getCart();
+
+    checkoutItems.innerHTML = "";
+
+    let subtotal = 0;
+
+    if (cart.length === 0) {
+
+        checkoutItems.innerHTML = `
+            <p>Your cart is empty.</p>
+        `;
+
+        return;
+
+    }
+
+    cart.forEach(item => {
+
+        subtotal += item.price * item.quantity;
+
+        checkoutItems.innerHTML += `
+
+            <div class="checkout-item">
+
+                <img src="${item.image}" alt="${item.name}">
+
+                <div class="checkout-item-info">
+
+                    <h3>${item.name}</h3>
+
+                    <p>Price: ₹${item.price.toLocaleString()}</p>
+
+                    <p>Quantity: ${item.quantity}</p>
+
+                    <strong>
+                        ₹${(item.price * item.quantity).toLocaleString()}
+                    </strong>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+    const subtotalElement =
+        document.getElementById("checkout-subtotal");
+
+    const totalElement =
+        document.getElementById("checkout-total");
+
+    if (subtotalElement) {
+        subtotalElement.textContent =
+            "₹" + subtotal.toLocaleString();
+    }
+
+    if (totalElement) {
+        totalElement.textContent =
+            "₹" + subtotal.toLocaleString();
+    }
+
+}
+
+loadCheckout();
