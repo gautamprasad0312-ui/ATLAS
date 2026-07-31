@@ -391,3 +391,27 @@ if (addressForm) {
     });
 
 }
+// -----------------------------
+// BUY NOW
+// -----------------------------
+
+const buyButton = document.getElementById("buy-now");
+
+if (buyButton) {
+
+    buyButton.addEventListener("click", () => {
+
+        const product = getCurrentProduct();
+
+        if (!product) {
+            alert("Product not found.");
+            return;
+        }
+
+        addToCart(product);
+
+        window.location.href = "checkout.html";
+
+    });
+
+}
