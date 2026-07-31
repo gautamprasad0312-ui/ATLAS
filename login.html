@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Atlas | Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Icons -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="main-header">
+
+        <div class="logo">
+
+            <a href="index.html">ATLAS</a>
+
+        </div>
+
+        <nav class="main-nav">
+
+            <a href="index.html">Home</a>
+
+            <a href="#">Categories</a>
+
+            <a href="#">Products</a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <a href="wishlist.html" class="nav-icon">
+
+                ❤️ Wishlist
+
+                <span id="wishlist-count">0</span>
+
+            </a>
+
+            <a href="cart.html" class="nav-icon">
+
+                🛒 Cart
+
+                <span id="cart-count">0</span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- Login -->
+
+    <main class="login-page">
+
+        <div class="login-card">
+
+            <h1>Welcome to Atlas</h1>
+
+            <p class="login-subtitle">
+
+                Continue securely to complete your purchase.
+
+            </p>
+
+            <!-- Email -->
+
+            <div class="input-group">
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email">
+
+            </div>
+
+            <button
+                class="primary-btn login-btn"
+                id="email-login">
+
+                Continue
+
+            </button>
+
+            <div class="divider">
+
+                <span>OR</span>
+
+            </div>
+
+            <!-- Google -->
+
+            <button
+                class="social-btn google-btn"
+                id="google-login">
+
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                     width="22">
+
+                Continue with Google
+
+            </button>
+
+            <!-- Apple -->
+
+            <button
+                class="social-btn apple-btn"
+                id="apple-login">
+
+                
+
+                Continue with Apple
+
+            </button>
+
+            <!-- Guest -->
+
+            <button
+                class="social-btn guest-btn"
+                id="guest-login">
+
+                Continue as Guest
+
+            </button>
+
+            <p class="register-text">
+
+                New to Atlas?
+
+                <a href="#">
+
+                    Create Account
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
