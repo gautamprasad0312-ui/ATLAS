@@ -8,6 +8,12 @@ function getCurrentProduct() {
 
     if (!button) return null;
 
+    const qtyElement = document.getElementById("quantity");
+
+    const quantity = qtyElement
+        ? Number(qtyElement.textContent)
+        : 1;
+
     return {
 
         id: Number(button.dataset.id),
@@ -16,7 +22,13 @@ function getCurrentProduct() {
 
         price: Number(button.dataset.price),
 
-        image: button.dataset.image
+        image: button.dataset.image,
+
+        quantity: quantity
+
+    };
+
+}
 };
 
 // -----------------------------
