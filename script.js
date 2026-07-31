@@ -331,4 +331,47 @@ if (appleButton) {
     });
 
 }
+// =========================
+// SAVE ADDRESS
+// =========================
+
+const addressForm = document.getElementById("address-form");
+
+if (addressForm) {
+
+    addressForm.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+        const address = {
+
+            name: document.getElementById("full-name").value,
+
+            mobile: document.getElementById("mobile").value,
+
+            house: document.getElementById("house").value,
+
+            street: document.getElementById("street").value,
+
+            landmark: document.getElementById("landmark").value,
+
+            city: document.getElementById("city").value,
+
+            state: document.getElementById("state").value,
+
+            pincode: document.getElementById("pincode").value
+
+        };
+
+        localStorage.setItem(
+            "deliveryAddress",
+            JSON.stringify(address)
+        );
+
+        alert("Address Saved Successfully!");
+
+        window.location.href = "payment.html";
+
+    });
+
 }
