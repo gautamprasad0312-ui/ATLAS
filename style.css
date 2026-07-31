@@ -447,3 +447,74 @@ button{cursor:pointer;transition:.3s}
     font-weight:600;
 
 }
+/* =========================
+   ADDRESS PAGE
+========================= */
+
+.address-page{
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:60px 20px;
+
+}
+
+.address-card{
+
+    width:100%;
+
+    max-width:700px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.address-card h1{
+
+    margin-bottom:10px;
+
+}
+
+.address-card p{
+
+    color:#666;
+
+    margin-bottom:30px;
+
+}
+
+#address-form{
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+#address-form input{
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+}
+
+#address-form input:focus{
+
+    border-color:#2563eb;
+
+    outline:none;
+
+}
