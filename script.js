@@ -241,3 +241,19 @@ function loadCheckout() {
 }
 
 loadCheckout();
+
+// =========================
+// CHECKOUT BUTTON
+// =========================
+
+const checkoutButton = document.getElementById("checkout-btn");
+
+if (checkoutButton) {
+
+    checkoutButton.addEventListener("click", () => {
+
+        window.location.href = "checkout.html";
+
+    });
+
+}
