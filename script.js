@@ -272,3 +272,63 @@ if (continueButton) {
     });
 
 }
+// =========================
+// EMAIL CONTINUE
+// =========================
+
+const emailButton = document.getElementById("email-login");
+
+if (emailButton) {
+
+    emailButton.addEventListener("click", () => {
+
+        const email = document
+            .getElementById("email")
+            .value
+            .trim();
+
+        if (email === "") {
+
+            alert("Please enter your email.");
+
+            return;
+
+        }
+
+        localStorage.setItem("customerEmail", email);
+
+        window.location.href = "address.html";
+
+    });
+// =========================
+// GOOGLE LOGIN
+// =========================
+
+const googleButton = document.getElementById("google-login");
+
+if (googleButton) {
+
+    googleButton.addEventListener("click", () => {
+
+        alert("Google Login will be enabled soon.");
+
+    });
+
+}
+
+// =========================
+// APPLE LOGIN
+// =========================
+
+const appleButton = document.getElementById("apple-login");
+
+if (appleButton) {
+
+    appleButton.addEventListener("click", () => {
+
+        alert("Apple Login will be enabled soon.");
+
+    });
+
+}
+}
