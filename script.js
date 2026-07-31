@@ -257,3 +257,18 @@ if (checkoutButton) {
     });
 
 }
+// =========================
+// CONTINUE TO LOGIN
+// =========================
+
+const continueButton = document.getElementById("continue-btn");
+
+if (continueButton) {
+
+    continueButton.addEventListener("click", () => {
+
+        window.location.href = "login.html";
+
+    });
+
+}
