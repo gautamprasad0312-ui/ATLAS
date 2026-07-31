@@ -1,17 +1,22 @@
-// ======================================
-// ATLAS - MAIN SCRIPT
-// Version 2.0
-// ======================================
-
 // -----------------------------
-// Product Data (Temporary)
+// Product Data
 // -----------------------------
 
-const product = {
-    id: 1,
-    name: "iPhone 16 Pro",
-    price: 119999,
-    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600"
+function getCurrentProduct() {
+
+    const button = document.getElementById("add-to-cart");
+
+    if (!button) return null;
+
+    return {
+
+        id: Number(button.dataset.id),
+
+        name: button.dataset.name,
+
+        price: Number(button.dataset.price),
+
+        image: button.dataset.image
 };
 
 // -----------------------------
@@ -87,13 +92,24 @@ function addToCart(product) {
 // Product Page
 // -----------------------------
 
-const addButton = document.getElementById("add-to-cart");
+    const addButton = document.getElementById("add-to-cart");
 
 if (addButton) {
 
     addButton.addEventListener("click", () => {
 
+        const product = getCurrentProduct();
+
+        if (!product) {
+            alert("Product not found.");
+            return;
+        }
+
         addToCart(product);
+
+    });
+
+}
 
     });
 
