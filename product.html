@@ -11,139 +11,142 @@
 
 <body>
 
-<header>
-
-    <h1><a href="index.html" class="logo">ATLAS</a></h1>
+    <!-- Header -->
 
     <header class="main-header">
 
-    <div class="logo">
-        <a href="index.html">ATLAS</a>
-    </div>
-
-    <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="#">Categories</a>
-        <a href="#">Products</a>
-    </nav>
-
-    <div class="header-actions">
-
-        <a href="wishlist.html" class="nav-icon">
-            ❤️ Wishlist
-            <span id="wishlist-count">0</span>
-        </a>
-
-        <a href="cart.html" class="nav-icon">
-            🛒 Cart
-            <span id="cart-count">0</span>
-        </a>
-
-        <a href="login.html" class="nav-icon">
-            👤 Login
-        </a>
-
-    </div>
-
-</header>
-</header>
-
-<main class="product-container">
-
-    <div class="product-gallery">
-
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900"
-             alt="Product">
-
-    </div>
-
-    <div class="product-details">
-
-        <span class="badge">BEST SELLER</span>
-
-        <h1>iPhone 16 Pro</h1>
-
-        <div class="rating">
-            ⭐⭐⭐⭐⭐
-            <span>(2,143 Reviews)</span>
+        <div class="logo">
+            <a href="index.html">ATLAS</a>
         </div>
 
-        <h2 class="price">₹1,19,999</h2>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="#">Categories</a>
+            <a href="#">Products</a>
+        </nav>
 
-        <p class="stock">
-            ✔ In Stock
-        </p>
+        <div class="header-actions">
 
-        <div class="delivery">
+            <a href="wishlist.html" class="nav-icon">
+                ❤️ Wishlist
+                <span id="wishlist-count">0</span>
+            </a>
 
-            <p>🚚 Free Delivery</p>
+            <a href="cart.html" class="nav-icon">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </a>
 
-            <p>🔁 7-Day Replacement</p>
-
-            <p>🔒 Secure Payment</p>
+            <a href="login.html" class="nav-icon">
+                👤 Login
+            </a>
 
         </div>
 
-        <div class="quantity">
+    </header>
 
-            <label>Quantity</label>
+    <!-- Product Section -->
 
-            <div class="qty-box">
+    <main class="product-container">
 
-                <button>-</button>
+        <div class="product-gallery">
 
-                <span>1</span>
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900"
+                alt="Apple iPhone 16 Pro">
 
-                <button>+</button>
+        </div>
+
+        <div class="product-details">
+
+            <span class="badge">BEST SELLER</span>
+
+            <h1>iPhone 16 Pro</h1>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐
+                <span>(2,143 Reviews)</span>
+            </div>
+
+            <h2 class="price">₹1,19,999</h2>
+
+            <p class="stock">
+                ✔ In Stock
+            </p>
+
+            <div class="delivery">
+
+                <p>🚚 Free Delivery</p>
+
+                <p>🔁 7-Day Replacement</p>
+
+                <p>🔒 Secure Payment</p>
+
+            </div>
+
+            <div class="quantity">
+
+                <label>Quantity</label>
+
+                <div class="qty-box">
+
+                    <button id="decrease-qty">−</button>
+
+                    <span id="quantity">1</span>
+
+                    <button id="increase-qty">+</button>
+
+                </div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="cart-btn" id="add-to-cart">
+                    Add to Cart
+                </button>
+
+                <button class="buy-btn" id="buy-now">
+                    Buy Now
+                </button>
 
             </div>
 
         </div>
 
-        <div class="buttons">
+    </main>
 
-           <button class="cart-btn" id="add-to-cart">
-    Add to Cart
-</button>
+    <!-- Description -->
 
-            <button class="buy-btn">
-                Buy Now
-            </button>
+    <section class="description">
 
-        </div>
+        <h2>Description</h2>
 
-    </div>
+        <p>
+            Experience Apple's latest flagship smartphone with a powerful processor,
+            stunning display, professional camera system, premium titanium design,
+            and all-day battery life.
+        </p>
 
-</main>
+    </section>
 
-<section class="description">
+    <!-- Specifications -->
 
-    <h2>Description</h2>
+    <section class="description">
 
-    <p>
-        Experience Apple's latest flagship smartphone with a powerful processor,
-        stunning display, professional camera system, premium titanium design,
-        and all-day battery life.
-    </p>
+        <h2>Specifications</h2>
 
-</section>
+        <ul>
+            <li>Display: 6.3-inch OLED</li>
+            <li>Processor: Apple A19 Pro</li>
+            <li>Storage: 256 GB</li>
+            <li>Camera: 48 MP Triple Camera</li>
+            <li>Battery: All-Day Battery</li>
+        </ul>
 
-<section class="description">
-
-    <h2>Specifications</h2>
-
-    <ul>
-        <li>Display: 6.3-inch OLED</li>
-        <li>Processor: Apple A19 Pro</li>
-        <li>Storage: 256 GB</li>
-        <li>Camera: 48 MP Triple Camera</li>
-        <li>Battery: All-Day Battery</li>
-    </ul>
-
-</section>
+    </section>
 
     <script src="script.js"></script>
-    
-</body>
-</html>
 
+</body>
+
+</html>
