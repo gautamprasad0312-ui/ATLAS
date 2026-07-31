@@ -29,7 +29,6 @@ function getCurrentProduct() {
     };
 
 }
-};
 
 // -----------------------------
 // Get Cart
@@ -118,10 +117,6 @@ if (addButton) {
         }
 
         addToCart(product);
-
-    });
-
-}
 
     });
 
@@ -328,6 +323,8 @@ if (emailButton) {
         window.location.href = "address.html";
 
     });
+
+}
 // =========================
 // GOOGLE LOGIN
 // =========================
